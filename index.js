@@ -5,7 +5,7 @@ const app = express();
 const authRoutes = require('./routes/auth');
 const postsRoutes = require('./routes/posts');
 const photoRoutes = require('./routes/photo');
-const cors = require('cors');
+// const cors = require('cors');
 
 // parse application/json
 app.use(express.json());
@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 //get permisions and disable CORS
-app.use(cors());
+// app.use(cors());
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods','GET, POST, PUT, DELETE, OPTIONS');
