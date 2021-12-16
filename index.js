@@ -31,7 +31,7 @@ app.use('/auth', authRoutes);
 app.use('/auth', postsRoutes);
 app.use('/auth', photoRoutes);
 
-
-app.listen(3000, () =>{
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () =>{
     console.log('Server Conectado.');
 });
